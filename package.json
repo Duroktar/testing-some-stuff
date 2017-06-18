@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "name": "all-services",
+    "install": "cd intouch-main-app && npm install && cd.. && cd intouch-messages-service && npm install",
+    "postinstall": "npm start --prefix intouch-main-app | npm start --prefix intouch-messages-service"
+  },
+  "dependencies": {
+    "postinstall-build": "^5.0.0"
+  }
+}
