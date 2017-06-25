@@ -1,0 +1,31 @@
+fuge_global:
+  tail: false
+  monitor: false
+  dns_host: 127.0.0.1
+  dns_port: 53053
+  dns_suffix: svc.cluster.local
+  dns_namespace: micro
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '**/*.log'
+    - '**/data/**'
+
+webservice:
+  tail: true
+  monitor: true
+  type: process
+  path: ../../web/
+  run: npm start
+  test: npm test
+  ports:
+    - webservice=3000
+
+taskservice:
+  tail: true
+  monitor: true
+  type: process
+  path: ../../tasks/
+  run: python app/app.py 
+  ports:
+    - taskservice=3001

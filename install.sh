@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
-npm install --prefix "./intouch-main-app"
-npm install --prefix "./intouch-messages-service"
+
+for dir in `ls ${PWD##*/}`;
+do
+    for subdir in `ls ${PWD##*/}/$dir`;
+    do
+      npm install;
+    done
+done
