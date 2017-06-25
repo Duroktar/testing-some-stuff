@@ -1,0 +1,6 @@
+version: '2'
+services:
+  taskservice:
+    build: .
+    ports:
+      - 8000:7878
