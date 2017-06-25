@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Tasks Demo",
+		"_postman_id": "dba8f17a-cc94-eef0-353a-1d8fe45b1d06",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tasks POST",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3001/tasks?description=Walk the dog&when=at 6:30 am",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "Walk the dog",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "when",
+							"value": "at 6:30 am",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Add a task to the queue"
+			},
+			"response": []
+		}
+	]
+}
